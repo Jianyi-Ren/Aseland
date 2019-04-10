@@ -81,9 +81,9 @@ Postgresql
 Deadline  | Keyword | Expected Deliverible | Results
 --------- | ------  | ------- | ----
 4.14  | set up | setup enviroment, establish design docs|
-4.21  | User | **Users/Search** APIs except for  **[GET] /users** with conditions - Can Signup, login, logout |
-4.28  | Friend | **[GET] /users** with condition - User List View, User Detail View|
-5.12  | Search | **Friend** APIs |
+4.21  | User | **User** APIs - Can Signup, login, logout |
+4.28  | Friend | **Friend** APIs|
+5.12  | Search | **[GET] /users** with condition - User List View, User Detail View|
 5.19  | Article | **Articles** APIs|
 5.26  |  Comment |**Comments** APIs|
 5.31  | Deployment | (load test?) demo|
