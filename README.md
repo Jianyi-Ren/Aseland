@@ -1,5 +1,3 @@
-# Aseland
-
 # Aseland - Scope Document
 
 ## Short Description
