@@ -1,15 +1,15 @@
 # Aseland
 
-## Introduction
+# Aseland - Scope Document
+
+## Short Description
 Asexuality, sometimes considered a lack of sexual orientation, is a low/absent desire for sexual activity and a lack of sexual attraction to anyone.
 
 Aseland is a dating app to help the asextual population in China to look for romantic non-sexual partnership.
 
+## Scope of the Project
+
 V1 includes the following functions
-
-## Goal
-
-#### This project: 
 
 The API for
 
@@ -31,9 +31,8 @@ The API for
 	- make comments
 	- like other's comment
 
-####Future work:
+#### Strech/future work:
 
-- Friend system
 - Chat
 
 ## Architecture
