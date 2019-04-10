@@ -73,7 +73,7 @@ Django REST framework
 - **[PUT] articles/{articleid}/comments/{commentid}** update a comment for an article
 
 ### Database 
-Postgresql
+![Postgresql](https://github.com/Jianyi-Ren/Aseland/blob/master/doc/Aseland%20UML.png)
 
 
 ## Roadmap & Milestones
