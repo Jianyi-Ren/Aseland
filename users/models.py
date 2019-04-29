@@ -1,49 +1,47 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
-from model_utils import Choices, FieldTracker
-from model_utils.fields import (MonitorField, StatusField)
-from Users.static import UserConstants
+from users.static import UserConstants
 
 class CustomUser(AbstractUser):
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
 
     name = models.CharField(blank=True, max_length=255)
-    status = Choices(
-        UserConstants.BUILD_ITEM_STATUS_CREATED,
-        UserConstants.BUILD_ITEM_STATUS_IN_PROGRESS,
-        UserConstants.BUILD_ITEM_STATUS_COMPLETED,
-        UserConstants.BUILD_ITEM_STATUS_CANCELED
+    status = (
+        0, UserConstants.USER_STATUS_CREATED,
+        1, UserConstants.USER_STATUS_ACTIVATED,
+        2, UserConstants.USER_STATUS_BLOCKED,
+        3, UserConstants.USER_STATUS_DELETED
     )
 
-    gender = Choices(
-        UserConstants.USER_GENDER_FEMALE,
-        UserConstants.USER_GENDER_MALE
+    gender = (
+        0, UserConstants.USER_GENDER_FEMALE,
+        1, UserConstants.USER_GENDER_MALE
     )
     province = models.CharField(blank=True, max_length=255)
     city = models.CharField(blank=True, max_length=255)
     avatar = models.CharField(blank=True, max_length=255)
 
-    sex_acceptance = Choices(
-        UserConstants.USER_SEX_ACCEPTANCE_NO,
-        UserConstants.USER_SEX_ACCEPTANCE_RARE,
-        UserConstants.USER_SEX_ACCEPTANCE_REGULAR
+    sex_acceptance = (
+        0, UserConstants.USER_SEX_ACCEPTANCE_NO,
+        1, UserConstants.USER_SEX_ACCEPTANCE_RARE,
+        2, UserConstants.USER_SEX_ACCEPTANCE_REGULAR
     )
 
-    marriage_status = Choices(
-        UserConstants.USER_MARRIAGE_SINGLE,
-        UserConstants.USER_MARRIAGE_BFGB,
-        UserConstants.USER_MARRIAGE_MARRIED,
-        UserConstants.USER_MARRIAGE_DIVORCED,
-        UserConstants.USER_MARRIAGE_WIDOW
+    marriage_status = (
+        0, UserConstants.USER_MARRIAGE_SINGLE,
+        1, UserConstants.USER_MARRIAGE_BFGB,
+        2, UserConstants.USER_MARRIAGE_MARRIED,
+        3, UserConstants.USER_MARRIAGE_DIVORCED,
+        4, UserConstants.USER_MARRIAGE_WIDOW
     )
 
-    education = Choices(
-        UserConstants.USER_EDUCATION_MIDDLE_SCHOOL_AND_BELOW,
-        UserConstants.USER_EDUCATION_HIGH_SCHOOL,
-        UserConstants.USER_EDUCATION_COLLEGE,
-        UserConstants.USER_EDUCATION_MASTER,
-        UserConstants.USER_EDUCATION_PHD
+    education = (
+        0, UserConstants.USER_EDUCATION_MIDDLE_SCHOOL_AND_BELOW,
+        1, UserConstants.USER_EDUCATION_HIGH_SCHOOL,
+        2, UserConstants.USER_EDUCATION_COLLEGE,
+        3, UserConstants.USER_EDUCATION_MASTER,
+        4, UserConstants.USER_EDUCATION_PHD
     )
 
     occupation = models.CharField(blank=True, max_length=255)
