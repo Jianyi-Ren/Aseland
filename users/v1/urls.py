@@ -1,21 +1,24 @@
 # users/urls.py
-from django.urls import path
+from django.conf.urls import url
 
-from Aseland.users.v1 import views
+from . import views
 
 urlpatterns = [
 
-    path('', views.UserListView.as_view()),
+    url('', views.UserListView.as_view()),
 
 
     # get user list
+    url(r'^users/$',
+        views.UserListView.as_view(), name='user-list'
+        )
 
     # get a user detail
 
     # update user detail
 
 
-    
+
 
     # Friend
 
