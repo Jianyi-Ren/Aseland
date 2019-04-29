@@ -1,9 +1,10 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
+from django.utils import timezone
 from users.static import UserConstants
 
 class CustomUser(AbstractUser):
-    created = models.DateTimeField(auto_now_add=True)
+    created = models.DateTimeField(default=timezone.now)
     updated = models.DateTimeField(auto_now=True)
 
     name = models.CharField(blank=True, max_length=255)
@@ -23,7 +24,7 @@ class CustomUser(AbstractUser):
     avatar = models.CharField(blank=True, max_length=255)
 
     sex_acceptance = (
-        0, UserConstants.USER_SEX_ACCEPTANCE_NO,
+        0, UserConstants.USER_SEX_ACCEPTANCE_NEVER,
         1, UserConstants.USER_SEX_ACCEPTANCE_RARE,
         2, UserConstants.USER_SEX_ACCEPTANCE_REGULAR
     )
@@ -47,14 +48,9 @@ class CustomUser(AbstractUser):
     occupation = models.CharField(blank=True, max_length=255)
     signature = models.CharField(blank=True, max_length=255)
 
-    saved_user = models.ForeignKey(
-        blocked_users = models.ManyToManyField("self", blank=True)
-    )
+    saved_users = models.ManyToManyField("self", blank=True)
 
-    blocked_user = models.ForeignKey(
-        blocked_users=models.ManyToManyField("self", blank=True)
-    )
-
+    blocked_users = models.ManyToManyField("self", blank=True)
 
     def __str__(self):
         return self.email

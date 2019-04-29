@@ -1,8 +1,9 @@
 # users/views.py
 from rest_framework import generics
 
-from . import models
-from . import serializers
+from Aseland.users import models
+from Aseland.users.v1 import serializers
+
 
 class UserListView(generics.ListCreateAPIView):
     queryset = models.CustomUser.objects.all()

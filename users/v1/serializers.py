@@ -1,6 +1,6 @@
 # users/serializers.py
 from rest_framework import serializers
-from . import models
+from Aseland.users import models
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
