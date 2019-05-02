@@ -1,23 +1,18 @@
 # users/urls.py
-from django.conf.urls import url
-
+from django.urls import include, path
 from . import views
 
 urlpatterns = [
 
-    url('', views.UserListView.as_view()),
-
+    path('', views.UserListView.as_view()),
+    path('<int:pk>', views.UserGetModifyView.as_view()),
 
     # get user list
-    url(r'^users/$',
-        views.UserListView.as_view(), name='user-list'
-        )
+
 
     # get a user detail
 
     # update user detail
-
-
 
 
     # Friend

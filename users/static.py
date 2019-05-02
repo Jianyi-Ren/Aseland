@@ -7,10 +7,10 @@ class UserConstants:
     USER_STATUS_DELETED = 'deleted'
 
     USER_STATUS_CHOICES = (
-        0, USER_STATUS_CREATED,
-        1, USER_STATUS_ACTIVATED,
-        2, USER_STATUS_BLOCKED,
-        3, USER_STATUS_DELETED
+        (0, USER_STATUS_CREATED),
+        (1, USER_STATUS_ACTIVATED),
+        (2, USER_STATUS_BLOCKED),
+        (3, USER_STATUS_DELETED)
     )
 
     #gender
@@ -23,14 +23,15 @@ class UserConstants:
     )
 
     #sex_acceptance
+    USER_SEX_ACCEPTANCE_UNDEFINED='undefined'
     USER_SEX_ACCEPTANCE_NEVER = 'never'
     USER_SEX_ACCEPTANCE_RARE = 'rare'
     USER_SEX_ACCEPTANCE_REGULAR ='regular'
 
     USER_SEX_ACCEPTANCE_CHOICES = (
-        (0, USER_SEX_ACCEPTANCE_NEVER),
+        (0, USER_SEX_ACCEPTANCE_REGULAR),
         (1, USER_SEX_ACCEPTANCE_RARE),
-        (2, USER_SEX_ACCEPTANCE_REGULAR),
+        (2, USER_SEX_ACCEPTANCE_NEVER),
     )
 
     #marriage_status
