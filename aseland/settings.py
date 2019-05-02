@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
+    'django_filters',
 
     'rest_framework',
     'rest_framework.authtoken',
@@ -48,7 +49,7 @@ INSTALLED_APPS = [
     'rest_auth.registration',
 
     'api',
-    'users'
+    'users',
 ]
 
 MIDDLEWARE = [
@@ -87,8 +88,12 @@ WSGI_APPLICATION = 'aseland.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'aseland_local',
+        'USER': 'aseland',
+        'PASSWORD': 'aseland',
+        'HOST': 'localhost',
+        'PORT':'5432'
     }
 }
 

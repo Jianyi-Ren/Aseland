@@ -1,0 +1,65 @@
+class UserConstants:
+
+    # status
+    USER_STATUS_CREATED = 'created'
+    USER_STATUS_ACTIVATED = 'activated'
+    USER_STATUS_BLOCKED = 'blocked'
+    USER_STATUS_DELETED = 'deleted'
+
+    USER_STATUS_CHOICES = (
+        (0, USER_STATUS_CREATED),
+        (1, USER_STATUS_ACTIVATED),
+        (2, USER_STATUS_BLOCKED),
+        (3, USER_STATUS_DELETED)
+    )
+
+    #gender
+    USER_GENDER_FEMALE= 'female'
+    USER_GENDER_MALE = 'male'
+
+    USER_GENDER_CHOICES = (
+        (0, USER_GENDER_FEMALE),
+        (1, USER_GENDER_MALE),
+    )
+
+    #sex_acceptance
+    USER_SEX_ACCEPTANCE_UNDEFINED='undefined'
+    USER_SEX_ACCEPTANCE_NEVER = 'never'
+    USER_SEX_ACCEPTANCE_RARE = 'rare'
+    USER_SEX_ACCEPTANCE_REGULAR ='regular'
+
+    USER_SEX_ACCEPTANCE_CHOICES = (
+        (0, USER_SEX_ACCEPTANCE_REGULAR),
+        (1, USER_SEX_ACCEPTANCE_RARE),
+        (2, USER_SEX_ACCEPTANCE_NEVER),
+    )
+
+    #marriage_status
+    USER_MARRIAGE_SINGLE = 'single'
+    USER_MARRIAGE_BFGB = 'bfgf'
+    USER_MARRIAGE_MARRIED = 'married'
+    USER_MARRIAGE_DIVORCED = 'divorced'
+    USER_MARRIAGE_WIDOW = 'widow'
+
+    USER_MARRIAGE_STATUS_CHOICES = (
+        (0, USER_MARRIAGE_SINGLE),
+        (1, USER_MARRIAGE_BFGB),
+        (2, USER_MARRIAGE_MARRIED),
+        (3, USER_MARRIAGE_DIVORCED),
+        (4, USER_MARRIAGE_WIDOW),
+    )
+
+    #education
+    USER_EDUCATION_MIDDLE_SCHOOL_AND_BELOW = 'middle_school'
+    USER_EDUCATION_HIGH_SCHOOL = 'high_school'
+    USER_EDUCATION_COLLEGE = 'college'
+    USER_EDUCATION_MASTER = 'master'
+    USER_EDUCATION_PHD = 'phd'
+
+    USER_EDUCATION_CHOICES = (
+        (0, USER_EDUCATION_MIDDLE_SCHOOL_AND_BELOW),
+        (1, USER_EDUCATION_HIGH_SCHOOL),
+        (2, USER_EDUCATION_COLLEGE),
+        (3, USER_EDUCATION_MASTER),
+        (4, USER_EDUCATION_PHD),
+    )
