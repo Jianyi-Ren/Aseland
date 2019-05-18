@@ -33,7 +33,12 @@ The API for
 
 - Chat
 
-## Architecture
+## Get Started
+Run
+
+`source venv/bin/activate`
+  python manage.py runserver
+## API
 ### Frontend
 React (Out of the scope of this project)
 ### Backend
@@ -58,16 +63,18 @@ Django REST framework
 
 #### Articles
 - **[GET] /articles** get article list
-- **[GET] /articles/{user_pk}** get articles of a user
 - **[POST] /articles** create new article
-- **[GET] /articles/{pk}** get an article
-- **[PUT] /article/{pk}** update an article
+- **[GET/PUT/DELETE] /articles/{pk}** get/update/delete an article
+- **[DELETE] /article?pks={pks}** delete articles
+- **[GET] /articles/{user_pk}** get articles of a user
+- **[POST] /article/likes?userepk={user_pk}&articlepk={articlepk}** update an article
+
+
 
 #### Comments
 - **[GET] articles/{articleid}/comments/** get all comments for an article
 - **[POST] articles/{articleid}/comments/** create new comment for an article
-- **[GET] articles/{articleid}/comments/{commentid}** get all comments for an article
-- **[PUT] articles/{articleid}/comments/{commentid}** update a comment for an article
+- **[GET/PUT/DELETE] articles/{articleid}/comments/{commentid}** get a comment for an article
 
 ### Database 
 ![Postgresql](https://github.com/Jianyi-Ren/Aseland/blob/master/doc/Aseland%20UML.png)
