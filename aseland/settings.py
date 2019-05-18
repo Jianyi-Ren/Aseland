@@ -50,6 +50,8 @@ INSTALLED_APPS = [
 
     'api',
     'users',
+    'articles',
+    'comments'
 ]
 
 MIDDLEWARE = [
