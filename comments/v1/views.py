@@ -33,7 +33,7 @@ class CommentListView(generics.ListCreateAPIView):
 
 
 class CommentGetModifyView(generics.RetrieveAPIView, generics.UpdateAPIView):
-    # permission_classes = (permissions.IsAuthenticated,)
+    permission_classes = (permissions.IsAuthenticated,)
     serializer_class = serializers.CommentDetailSerializer
 
     def get_queryset(self):
