@@ -1,8 +1,10 @@
-from django.conf.urls import url, include
-from django.contrib import admin
+# comments/urls.py
 from django.urls import include, path
+from . import views
+
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('api/v1/', include('api.urls')),
+    path('', views.CommentListView.as_view()),
+    path('<int:pk>', views.CommentGetModifyView.as_view()),
+
 ]

@@ -1,4 +1,4 @@
-# users/urls.py
+# articles/urls.py
 from django.urls import include, path
 from . import views
 
