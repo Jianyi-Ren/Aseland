@@ -65,16 +65,13 @@ Django REST framework
 - **[GET] /articles** get article list
 - **[POST] /articles** create new article
 - **[GET/PUT/DELETE] /articles/{pk}** get/update/delete an article
-- **[DELETE] /article?pks={pks}** delete articles
 - **[GET] /articles/{user_pk}** get articles of a user
-- **[POST] /article/likes?userepk={user_pk}&articlepk={articlepk}** update an article
 
 
 
 #### Comments
 - **[GET] articles/{articleid}/comments/** get all comments for an article
-- **[POST] articles/{articleid}/comments/** create new comment for an article
-- **[GET/PUT/DELETE] articles/{articleid}/comments/{commentid}** get a comment for an article
+- **[GET/PUT/DELETE/POST] comments/{commentid}** get/update/delete a comment for an article
 
 ### Database 
 ![Postgresql](https://github.com/Jianyi-Ren/Aseland/blob/master/doc/Aseland%20UML.png)
